@@ -28,7 +28,7 @@ int main(void) {
     InitTimer23();
     InitTimer1();
     InitPWM();
-    PWMSetSpeed(50);
+    PWMSetSpeed(50,0);
     
     while (1) {
        // _T1Interrupt();
