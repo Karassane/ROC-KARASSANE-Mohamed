@@ -5,6 +5,7 @@
 #include "IO.h"
 #include "timer.h"
 #include "PWM.h"
+#include "ADC.h"
 
 
 int main(void) {
@@ -28,6 +29,7 @@ int main(void) {
     InitTimer23();
     InitTimer1();
     InitPWM();
+    InitADC1();
     //PWMSetSpeed(20,MOTEUR_DROIT);
       //  PWMSetSpeed(20,MOTEUR_GAUCHE);
     //PWMSetSpeedConsigne(20,MOTEUR_DROIT);
