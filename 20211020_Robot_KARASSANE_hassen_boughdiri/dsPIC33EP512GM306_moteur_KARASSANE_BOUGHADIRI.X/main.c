@@ -28,8 +28,10 @@ int main(void) {
     InitTimer23();
     InitTimer1();
     InitPWM();
-    PWMSetSpeed(20,MOTEUR_DROIT);
-        PWMSetSpeed(20,MOTEUR_GAUCHE);
+    //PWMSetSpeed(20,MOTEUR_DROIT);
+      //  PWMSetSpeed(20,MOTEUR_GAUCHE);
+    //PWMSetSpeedConsigne(20,MOTEUR_DROIT);
+    //PWMSetSpeedConsigne(20,MOTEUR_GAUCHE);
 
     
    
