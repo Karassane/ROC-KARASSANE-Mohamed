@@ -28,11 +28,15 @@ int main(void) {
     InitTimer23();
     InitTimer1();
     InitPWM();
-    PWMSetSpeed(50,0);
+    PWMSetSpeed(20,MOTEUR_DROIT);
+        PWMSetSpeed(20,MOTEUR_GAUCHE);
+
     
+   
+
     while (1) {
        // _T1Interrupt();
-        //_T3Interrupt();
+       // _T3Interrupt();
         //LED_BLANCHE = !LED_BLANCHE;
         //LED_BLEUE = !LED_BLEUE;
     } // fin main
