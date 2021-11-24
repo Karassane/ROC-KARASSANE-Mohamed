@@ -45,21 +45,38 @@ int main(void)
 
     while (1)
     {
-        if (ADCIsConversionFinished == 1)
+        if (ADCIsConversionFinished() == 1)
         {
             ADCClearConversionFinishedFlag();
             unsigned int * result = ADCGetResult();
             valeurrec1 = result[0]; // Read the AN-scan input 1 conversion result
             valeurrec2 = result[1]; // Read the AN3 conversion result
             valeurrec3 = result[2];
+            
+            if (valeurrec1 >= 380)
+            {
+                LED_ORANGE = 1;
+            }
+            else
+                LED_ORANGE = 0;
+
+            if (valeurrec2 >= 380)
+            {
+                LED_BLEUE = 1;
+            }
+            else
+                LED_BLEUE = 0;
+
+            if (valeurrec3 >= 380)
+            {
+                LED_BLANCHE = 1;
+            }
+            else
+                LED_BLANCHE = 0;
         }
-
-
-        // _T1Interrupt();
-        // _T3Interrupt();
-        //LED_BLANCHE = !LED_BLANCHE;
-        //LED_BLEUE = !LED_BLEUE;
-        // fin main
-
     }
+
+
 }
+
+
