@@ -33,14 +33,14 @@ void __attribute__((interrupt, no_auto_psv)) _T3Interrupt(void)
     //LED_ORANGE = !LED_ORANGE;
     if (toggle == 0)
     {
-        PWMSetSpeedConsigne(20, MOTEUR_DROIT);
-        PWMSetSpeedConsigne(20, MOTEUR_GAUCHE);
+        PWMSetSpeedConsigne(30, MOTEUR_DROIT);
+        PWMSetSpeedConsigne(30, MOTEUR_GAUCHE);
         toggle = 1;
     }
     else
     {
-        PWMSetSpeedConsigne(-20, MOTEUR_DROIT);
-        PWMSetSpeedConsigne(-20, MOTEUR_GAUCHE);
+        PWMSetSpeedConsigne(-30, MOTEUR_DROIT);
+        PWMSetSpeedConsigne(-30, MOTEUR_GAUCHE);
         toggle = 0;
     }
 }

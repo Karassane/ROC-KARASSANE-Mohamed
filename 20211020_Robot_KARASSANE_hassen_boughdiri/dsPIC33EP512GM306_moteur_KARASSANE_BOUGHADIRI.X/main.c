@@ -6,9 +6,12 @@
 #include "timer.h"
 #include "PWM.h"
 #include "ADC.h"
+unsigned int valeurrec1;
+unsigned int valeurrec2;
+unsigned int valeurrec3;
 
-
-int main(void) {
+int main(void)
+{
     /***************************************************************************************************/
     //Initialisation de l?oscillateur
     /****************************************************************************************************/
@@ -19,29 +22,44 @@ int main(void) {
     /****************************************************************************************************/
     InitIO();
 
-    LED_BLANCHE = 1;
-    LED_BLEUE = 1;
-    LED_ORANGE = 1;
+
+    //LED_BLANCHE = 1;
+    //LED_BLEUE = 1;
+    //LED_ORANGE = 1;
 
     /****************************************************************************************************/
     // Boucle Principale
     /****************************************************************************************************/
+    InitADC1();
+    InitPWM();
     InitTimer23();
     InitTimer1();
-    InitPWM();
-    InitADC1();
+
     //PWMSetSpeed(20,MOTEUR_DROIT);
-      //  PWMSetSpeed(20,MOTEUR_GAUCHE);
+    //  PWMSetSpeed(20,MOTEUR_GAUCHE);
     //PWMSetSpeedConsigne(20,MOTEUR_DROIT);
     //PWMSetSpeedConsigne(20,MOTEUR_GAUCHE);
 
-    
-   
 
-    while (1) {
-       // _T1Interrupt();
-       // _T3Interrupt();
+
+
+    while (1)
+    {
+        if (ADCIsConversionFinished == 1)
+        {
+            ADCClearConversionFinishedFlag();
+            unsigned int * result = ADCGetResult();
+            valeurrec1 = result[0]; // Read the AN-scan input 1 conversion result
+            valeurrec2 = result[1]; // Read the AN3 conversion result
+            valeurrec3 = result[2];
+        }
+
+
+        // _T1Interrupt();
+        // _T3Interrupt();
         //LED_BLANCHE = !LED_BLANCHE;
         //LED_BLEUE = !LED_BLEUE;
-    } // fin main
+        // fin main
+
+    }
 }
