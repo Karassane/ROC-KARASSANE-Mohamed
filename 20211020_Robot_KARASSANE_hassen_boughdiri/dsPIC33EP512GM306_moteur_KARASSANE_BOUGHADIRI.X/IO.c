@@ -1,4 +1,3 @@
-
 /*
 
  * File:   IO.c
@@ -44,22 +43,19 @@ void InitIO()
     _TRISG6 = 0; //LED Blanche
 
     _TRISG7 = 0; // LED Bleue
-    
-    
-    _TRISB14 = 0;
-    _TRISB15 = 0;
-
-    _TRISC6 = 0;
-    _TRISC7 = 0;
 
     
 
     // Moteurs 
+     _TRISB14 = 0;
+     _TRISB15 = 0 ;  
 
-
+     _TRISC6 = 0;
+     _TRISC7 = 0 ;
 
     //********** Configuration des entrées : _TRISxx = 1 ********************************   
 
-    
+        
 
 }
+
