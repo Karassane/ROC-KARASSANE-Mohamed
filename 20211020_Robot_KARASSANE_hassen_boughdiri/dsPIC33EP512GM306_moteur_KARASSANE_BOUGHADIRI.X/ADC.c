@@ -66,7 +66,7 @@ AD1CSSLbits.CSS11=1; // Enable AN11 for scan
 AD1CSSLbits.CSS15=1; // Enable AN16 for scan
 AD1CSSHbits.CSS16=1; // Enable AN16 for scan
 
-AD1CSSLbits.
+
 
 /* Assign MUXA inputs */
 AD1CHS0bits.CH0SA = 0;// CH0SA bits ignored for CH0 +ve input selection
