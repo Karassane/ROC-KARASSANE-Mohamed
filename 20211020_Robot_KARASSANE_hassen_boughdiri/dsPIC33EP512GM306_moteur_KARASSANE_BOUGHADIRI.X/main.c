@@ -39,32 +39,32 @@ int main(void) {
     while (1) {
         if (ADCIsConversionFinished() == 1) {
 
-            unsigned int * result = ADCGetResult();
-            ADCClearConversionFinishedFlag();
-            float volts0 = ((float) result [0]*3.3 / 4096 * 3.2);
-            robotState.distanceTelemetreExtDroit = 34 / volts0 - 5;
-            float volts1 = ((float) result [1]*3.3 / 4096 * 3.2);
-            robotState.distanceTelemetreDroit = 34 / volts1 - 5;
-            float volts2 = ((float) result [2])*3.3 / 4096 * 3.2;
-            robotState.distanceTelemetreCentre = 34 / volts2 - 5;
-            float volts3 = ((float) result [3]*3.3 / 4096 * 3.2);
-            robotState.distanceTelemetreEXTGauche = 34 / volts3 - 5;
-            float volts4 = ((float) result [4]*3.3 / 4096 * 3.2);
-            robotState.distanceTelemetreGauche = 34 / volts4 - 5;
-            
-//            //////////
-//    unsigned int * result = ADCGetResult();
+//            unsigned int * result = ADCGetResult();
 //            ADCClearConversionFinishedFlag();
-//            float volts3 = ((float) result [3]*3.3 / 4096 * 3.2);
-//            robotState.distanceTelemetreExtDroit = 34 / volts3 - 5;
-//            float volts4 = ((float) result [4]*3.3 / 4096 * 3.2);
-//            robotState.distanceTelemetreDroit = 34 / volts4 - 5;
+//            float volts0 = ((float) result [0]*3.3 / 4096 * 3.2);
+//            robotState.distanceTelemetreExtDroit = 34 / volts0 - 5;
+//            float volts1 = ((float) result [1]*3.3 / 4096 * 3.2);
+//            robotState.distanceTelemetreDroit = 34 / volts1 - 5;
 //            float volts2 = ((float) result [2])*3.3 / 4096 * 3.2;
 //            robotState.distanceTelemetreCentre = 34 / volts2 - 5;
-//            float volts0 = ((float) result [0]*3.3 / 4096 * 3.2);
-//            robotState.distanceTelemetreEXTGauche = 34 / volts0 - 5;
-//            float volts1 = ((float) result [1]*3.3 / 4096 * 3.2);
-//            robotState.distanceTelemetreGauche = 34 / volts1 - 5;
+//            float volts3 = ((float) result [3]*3.3 / 4096 * 3.2);
+//            robotState.distanceTelemetreEXTGauche = 34 / volts3 - 5;
+//            float volts4 = ((float) result [4]*3.3 / 4096 * 3.2);
+//            robotState.distanceTelemetreGauche = 34 / volts4 - 5;
+            
+//            //////////
+    unsigned int * result = ADCGetResult();
+            ADCClearConversionFinishedFlag();
+            float volts3 = ((float) result [3]*3.3 / 4096 * 3.2);
+            robotState.distanceTelemetreExtDroit = 34 / volts3 - 5;
+            float volts4 = ((float) result [4]*3.3 / 4096 * 3.2);
+            robotState.distanceTelemetreDroit = 34 / volts4 - 5;
+            float volts2 = ((float) result [2])*3.3 / 4096 * 3.2;
+            robotState.distanceTelemetreCentre = 34 / volts2 - 5;
+            float volts0 = ((float) result [0]*3.3 / 4096 * 3.2);
+            robotState.distanceTelemetreEXTGauche = 34 / volts0 - 5;
+            float volts1 = ((float) result [1]*3.3 / 4096 * 3.2);
+            robotState.distanceTelemetreGauche = 34 / volts1 - 5;
             
             
             if (robotState.distanceTelemetreExtDroit < 40) {
