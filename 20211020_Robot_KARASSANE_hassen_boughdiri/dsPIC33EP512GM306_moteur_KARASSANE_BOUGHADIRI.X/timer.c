@@ -61,7 +61,7 @@ void InitTimer1(void) {
     T1CONbits.TCS = 0; //clock source = internal clock
 //    PR1 = 40000000 / 64 / 50;
 
-    SetFreqTimer1(150);
+    SetFreqTimer1(250);
     IFS0bits.T1IF = 0; // Clear Timer Interrupt Flag
     IEC0bits.T1IE = 1; // Enable Timer interrupt
     T1CONbits.TON = 1; // Enable Timer

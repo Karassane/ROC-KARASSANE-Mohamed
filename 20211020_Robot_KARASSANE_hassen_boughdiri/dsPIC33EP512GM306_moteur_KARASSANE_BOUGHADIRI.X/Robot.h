@@ -12,9 +12,7 @@ float vitesseDroiteCommandeCourante;
 float distanceTelemetreDroit;
 float distanceTelemetreCentre;
 float distanceTelemetreGauche;
-//capteur4 5 
 float distanceTelemetreExtremDroit;
-
 float distanceTelemetreExtremGauche;
 }
 ;}
