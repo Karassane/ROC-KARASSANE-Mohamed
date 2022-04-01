@@ -24,25 +24,26 @@
 #define STATE_ARRET_EN_COURS 13
 #define STATE_RECULE 14
 #define STATE_RECULE_EN_COURS 15
-///////////////////////////////
-//#define STATE_TOURNE_GAUCHE_leg 16
-//#define STATE_TOURNE_GAUCHE_leg_EN_COURS 17
-//#define STATE_TOURNE_DROITE_leg 18
-//#define STATE_TOURNE_DROITE_leg_EN_COURS 19
-////////////////////////////////
 #define PAS_D_OBSTACLE 0
 #define OBSTACLE_A_GAUCHE 1
 #define OBSTACLE_A_DROITE 2
 #define OBSTACLE_EN_FACE 3
-/////////////
-//#define OBSTACLE_A_GAUCHE_ext 4
-//#define OBSTACLE_A_DROITE_ext 5
-//////////////
+#define OBSTACLE_EXTREMES 4
+ #define OBSTACLE_couloir_DROITE 5
+#define OBSTACLE_couloir_GAUCHE 6
+#define STATE_COULOIRE 16
+#define STATE_COULOIRE_EN_COURS 17
+#define STATE_COULOIRE_DROIT 18
+#define STATE_COULOIRE_DROIT_EN_COURS 19
+#define STATE_COULOIRE_GAUCHE 20 
+#define STATE_COULOIRE_GAUCHE_EN_COURS 21 
 void SetNextRobotStateInAutomaticMode();
 void OperatingSystemLoop(void);
-
+ 
 extern unsigned char stateRobot;
 //void SetNextRobotStateInAutomaticMode();
 extern unsigned char nextStateRobot;
 #endif	/* MAIN_H */
+
+
 

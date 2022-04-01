@@ -13,9 +13,9 @@ float distanceTelemetreDroit;
 float distanceTelemetreCentre;
 float distanceTelemetreGauche;
 //capteur4 5 
-float distanceTelemetreExtDroit;
+float distanceTelemetreExtremDroit;
 
-float distanceTelemetreEXTGauche;
+float distanceTelemetreExtremGauche;
 }
 ;}
 ;} ROBOT_STATE_BITS;
